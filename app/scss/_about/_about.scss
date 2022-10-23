@@ -1,0 +1,135 @@
+.about {
+  position: relative;
+  background-image: url(../images/about-bg.jpeg);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 80px 0 30px;
+
+  @include _750 {
+    padding-top: 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.7);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include _750 {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    max-width: 300px;
+    width: 100%;
+
+    @include _750 {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    @include _550 {
+      display: block;
+    }
+  }
+
+  &__foto {
+    max-width: 200px;
+    height: 250px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 5px gold;
+
+    @include _750 {
+      margin: 0 25px 0 0;
+    }
+
+    @include _550 {
+      max-width: 100px;
+      height: 120px;
+      margin: 0 10px 0 0;
+      float: left;
+    }
+  }
+
+  &__text-inner {
+    @include _750 {
+      margin-top: -10px;
+    }
+  }
+
+  &__item {
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include _750 {
+        margin-bottom: 2px;
+      }
+
+      @include _550 {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &__text {
+    color: rgb(48, 110, 121);
+
+    &--language {
+      display: block;
+
+      &:first-child {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__caption {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: rgb(48, 110, 121);
+
+    @include _750 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+  }
+
+
+  &__info {
+    margin-left: 45px;
+
+    @include _750 {
+      margin-left: 0;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    color: #fff;
+  }
+
+}

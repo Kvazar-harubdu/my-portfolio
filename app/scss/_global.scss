@@ -1,0 +1,46 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include rubik-400;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.title {
+  color: red;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.small-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills__list.hidden {
+  display: none;
+}
+
+.skills__title.tab-active {
+  color: rgb(48, 110, 121);
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}

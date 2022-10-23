@@ -1,0 +1,75 @@
+.first-page {
+  position: relative;
+  min-height: calc(100vh + 80px);
+  margin-top: -80px;
+  background-image: url('../images/bg.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.9);
+  }
+
+  &__wrapper {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include rubik-700;
+    font-size: 56px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px gold;
+
+    @include _480 {
+      font-size: 42px;
+    }
+  }
+
+  &__text {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    @include _480 {
+      line-height: 1;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: -40px;
+    animation-name: down-arrow;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes down-arrow {
+    0% {
+      bottom: -40px;
+    }
+
+    100% {
+      bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.skills {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../images/skills-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 80px 0;
+
+  @include _750 {
+    padding: 60px 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, 0.9);
+  }
+
+  &__caption {
+    color: #fff;
+  }
+
+  &__box:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: rgb(67, 67, 68);
+    background-color: #ccc;
+    padding-left: 50px;
+    cursor: pointer;
+
+    @include _750 {
+      padding-left: 5px;
+      font-size: 24px;
+    }
+
+    @include _550 {
+      height: auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      right: 20px;
+      background-image: url('../images/arrow.svg');
+
+      @include _750 {
+        right: 5px;
+      }
+
+      @include _550 {
+        display: none;
+      }
+    }
+  }
+
+  &__img-box {
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  &__img {
+    max-width: 70px;
+    height: 70px;
+    object-fit: cover;
+    
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__name {
+    @include rubik-700;
+    font-size: 24px;
+    display: block;
+    color: #c1c1c1;
+    text-shadow: 0 0 5px gold;
+    margin-bottom: 10px;
+  }
+
+  &__descr {
+    color: #c1c1c1;
+  }
+}
